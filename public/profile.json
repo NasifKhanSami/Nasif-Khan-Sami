@@ -1,0 +1,57 @@
+{
+  "name": "Nasif Khan Sami",
+  "title": "Software Engineer",
+  "address": "Mipur, Dhaka",
+  "email": "nasifkhansami01@gmail.com",
+  "phone": "+8801603013434",
+  "bio": "I am a passionate Software Engineering student with a strong interest in Artificial Intelligence and workflow automation. I enjoy building structured, efficient solutions using programming and modern automation tools, while continuously learning and improving my problem-solving skills.",
+  "education": [
+    {
+      "degree": "HSC-Science",
+      "institute": "Dhaka Commerce College",
+      "year": "2022 - 2024"
+    },
+    {
+      "degree": "B.S. in Software Engineering",
+      "institute": "Daffodil International University",
+      "year": "2025 - 2029"
+    }
+  ],
+  "skills": [
+    "AI Automation",
+    "Prompt Engineering",
+    "Digital Marketing",
+    "n8n"
+  ],
+  "interests": [
+    "Vibe Coding",
+    "Generative AI",
+    "AI Agent",
+    "Photography"
+  ],
+  "projects": [
+    {
+      "name": "Lumina Analytics",
+      "description": "A real-time data visualization dashboard for SaaS metrics with integrated AI insights.",
+      "link": "https://github.com"
+    },
+    {
+      "name": "Zenith Commerce",
+      "description": "High-performance headless e-commerce engine built with Remix and Shopify Hydrogen.",
+      "link": "https://github.com"
+    },
+    {
+      "name": "Aether UI",
+      "description": "A lightweight, accessible component library focused on motion and micro-interactions.",
+      "link": "https://github.com"
+    }
+  ],
+  "socials": {
+    "github": "https://github.com",
+    "linkedin": "https://linkedin.com",
+    "twitter": "https://twitter.com",
+    "facebook": "https://facebook.com"
+  },
+  "resume": "#",
+  "profileImage": "https://imperial-violet-uqyee543uf.edgeone.app/WhatsApp%20Image%202026-02-25%20at%2012.51.31%20AM.jpeg"
+}
