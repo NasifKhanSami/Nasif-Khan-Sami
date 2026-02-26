@@ -1,57 +1,186 @@
 {
   "name": "Nasif Khan Sami",
   "title": "Software Engineer",
-  "address": "Mipur, Dhaka",
+  "profileImage": "https://limited-gold-lxymhvebiy.edgeone.app/WhatsApp%20Image%202025-11-17%20at%2001.23.24_3111c8f8.jpg",
+  "heroImage": "https://limited-gold-lxymhvebiy.edgeone.app/WhatsApp%20Image%202025-11-17%20at%2001.23.24_3111c8f8.jpg",
+  "address": "Mirpur, Dhaka",
   "email": "nasifkhansami01@gmail.com",
   "phone": "+8801603013434",
   "bio": "I am a passionate Software Engineering student with a strong interest in Artificial Intelligence and workflow automation. I enjoy building structured, efficient solutions using programming and modern automation tools, while continuously learning and improving my problem-solving skills.",
+  "whatIDoBest": [
+    "AI-Powered Workflow Automation",
+    "Full-Stack Web Development",
+    "Prompt Engineering & LLM Integration",
+    "Digital Marketing Strategy"
+  ],
+  "highlights": {
+    "currentFocus": "AI automation and workflow optimization using n8n and Python.",
+    "learningMindset": "Constantly exploring new AI agents and generative models to stay ahead of the curve."
+  },
   "education": [
     {
       "degree": "HSC-Science",
       "institute": "Dhaka Commerce College",
-      "year": "2022 - 2024"
+      "year": "2022 - 2024",
+      "description": "Focused on Science and Mathematics, building a strong foundation for engineering studies."
     },
     {
       "degree": "B.S. in Software Engineering",
       "institute": "Daffodil International University",
-      "year": "2025 - 2029"
+      "year": "2025 - 2029",
+      "description": "Currently pursuing a degree in Software Engineering with a focus on AI and modern web technologies."
     }
   ],
   "skills": [
-    "AI Automation",
-    "Prompt Engineering",
-    "Digital Marketing",
-    "n8n"
+    {
+      "name": "n8n",
+      "level": "Advanced",
+      "category": "AI Automation",
+      "usageInfo": "Used in 10+ automation projects, saving over 20 hours of manual work weekly."
+    },
+    {
+      "name": "Prompt Engineering",
+      "level": "Advanced",
+      "category": "AI Automation",
+      "usageInfo": "Expert in crafting complex prompts for GPT-4 and Claude 3.5 Sonnet."
+    },
+    {
+      "name": "AI Agents",
+      "level": "Intermediate",
+      "category": "AI Automation",
+      "usageInfo": "Building autonomous agents with LangChain and AutoGPT."
+    },
+    {
+      "name": "React / Next.js",
+      "level": "Intermediate",
+      "category": "Web Development",
+      "usageInfo": "Built several responsive web applications and this portfolio."
+    },
+    {
+      "name": "TypeScript",
+      "level": "Intermediate",
+      "category": "Web Development",
+      "usageInfo": "Ensuring type safety in all modern web projects."
+    },
+    {
+      "name": "Tailwind CSS",
+      "level": "Advanced",
+      "category": "Web Development",
+      "usageInfo": "Crafting modern, responsive UIs with utility-first CSS."
+    },
+    {
+      "name": "Python",
+      "level": "Intermediate",
+      "category": "Tools & Platforms",
+      "usageInfo": "Used for scripting and AI model integration."
+    },
+    {
+      "name": "Digital Marketing",
+      "level": "Advanced",
+      "category": "Tools & Platforms",
+      "usageInfo": "Managed campaigns with 200% ROI for local businesses."
+    },
+    {
+      "name": "Git / GitHub",
+      "level": "Advanced",
+      "category": "Tools & Platforms",
+      "usageInfo": "Version control and collaborative development."
+    }
   ],
   "interests": [
     "Vibe Coding",
     "Generative AI",
-    "AI Agent",
-    "Photography"
+    "AI Agents",
+    "Photography",
+    "UI/UX Design",
+    "Open Source",
+    "Tech Blogging"
   ],
   "projects": [
     {
-      "name": "Lumina Analytics",
-      "description": "A real-time data visualization dashboard for SaaS metrics with integrated AI insights.",
-      "link": "https://github.com"
+      "name": "AI Content Engine",
+      "thumbnail": "https://picsum.photos/seed/ai-content/800/600",
+      "problemStatement": "Manual content creation was slow and inconsistent for marketing teams.",
+      "category": "AI Automation",
+      "techStack": ["n8n", "GPT-4", "WordPress"],
+      "status": "Live",
+      "details": {
+        "problem": "Content teams spent 40+ hours weekly on research and drafting.",
+        "role": "Lead Automation Engineer",
+        "solution": "Built an n8n workflow that researches topics, generates SEO-optimized drafts, and schedules them.",
+        "outcome": "Reduced content production time by 85% while increasing output by 3x.",
+        "github": "https://github.com/NasifKhanSami",
+        "liveDemo": "https://example.com"
+      }
     },
     {
-      "name": "Zenith Commerce",
-      "description": "High-performance headless e-commerce engine built with Remix and Shopify Hydrogen.",
-      "link": "https://github.com"
+      "name": "Smart CRM Sync",
+      "thumbnail": "https://picsum.photos/seed/crm-sync/800/600",
+      "problemStatement": "Sales leads were being lost due to fragmented data across 3 platforms.",
+      "category": "n8n",
+      "techStack": ["n8n", "HubSpot", "Slack", "Airtable"],
+      "status": "Live",
+      "details": {
+        "problem": "Sales team had no central source of truth for lead status.",
+        "role": "Workflow Architect",
+        "solution": "Developed a real-time synchronization engine between HubSpot and Airtable with Slack notifications.",
+        "outcome": "Zero lead leakage and 40% faster response time for the sales team.",
+        "github": "https://github.com/NasifKhanSami"
+      }
     },
     {
-      "name": "Aether UI",
-      "description": "A lightweight, accessible component library focused on motion and micro-interactions.",
-      "link": "https://github.com"
+      "name": "Vibe Portfolio",
+      "thumbnail": "https://picsum.photos/seed/portfolio/800/600",
+      "problemStatement": "Standard portfolios lack the premium feel and dynamic nature required for AI engineers.",
+      "category": "Web",
+      "techStack": ["React", "Tailwind CSS", "Framer Motion"],
+      "status": "Live",
+      "details": {
+        "problem": "Need a high-impact visual way to showcase automation and engineering skills.",
+        "role": "Full-Stack Developer",
+        "solution": "Crafted a matte maroon themed portfolio with dynamic JSON content management.",
+        "outcome": "Increased recruiter engagement and provided a central hub for all professional work.",
+        "github": "https://github.com/NasifKhanSami",
+        "liveDemo": "https://ais-pre-sgnks4p4cgf2zzu74mnh5q-219674549989.asia-east1.run.app"
+      }
+    },
+    {
+      "name": "LLM Prompt Library",
+      "thumbnail": "https://picsum.photos/seed/prompts/800/600",
+      "problemStatement": "Teams struggled to reuse effective prompts across different AI models.",
+      "category": "Prompt Engineering",
+      "techStack": ["Next.js", "Supabase", "OpenAI API"],
+      "status": "In Progress",
+      "details": {
+        "problem": "Prompt engineering knowledge was siloed and not easily searchable.",
+        "role": "Product Designer",
+        "solution": "Creating a collaborative library for testing, versioning, and sharing AI prompts.",
+        "outcome": "Expected to improve AI output consistency across the organization by 50%.",
+        "github": "https://github.com/NasifKhanSami"
+      }
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "Sami's ability to automate complex workflows using n8n is truly impressive. He saved our team dozens of hours every week.",
+      "name": "Rahat Ahmed",
+      "role": "Senior Developer",
+      "organization": "TechFlow Solutions"
+    },
+    {
+      "quote": "A forward-thinking engineer who doesn't just code, but solves real business problems with AI.",
+      "name": "Sarah Jenkins",
+      "role": "Marketing Director",
+      "organization": "GrowthLabs"
     }
   ],
   "socials": {
     "github": "https://github.com/NasifKhanSami",
     "linkedin": "https://www.linkedin.com/in/nasifkhansami/",
     "twitter": "https://x.com/samikhan_6789",
-    "facebook": "https://www.facebook.com/nasifkhan.sami"
+    "facebook": "https://www.facebook.com/nasifkhan.sami",
+    "instagram": "https://www.instagram.com/busy_samiii_/"
   },
-  "resume": "#",
-  "profileImage": "https://imperial-violet-uqyee543uf.edgeone.app/WhatsApp%20Image%202026-02-25%20at%2012.51.31%20AM.jpeg"
+  "resume": "https://example.com/resume.pdf",
+  "calendlyLink": "https://calendly.com/nasifkhansami01"
 }
