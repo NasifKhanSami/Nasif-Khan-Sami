@@ -43,12 +43,19 @@ export default function App() {
   const [profile, setProfile] = useState<ProfileData | null>(null);
   const [loading, setLoading] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('');
+  const [activeSection, setActiveSection] = useState('about');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
   const [projectFilter, setProjectFilter] = useState('All');
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 400,
+    damping: 60,
+    mass: 0.5,
+    restDelta: 0.001
+  });
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
     if (typeof window !== 'undefined') {
       return (localStorage.getItem('theme') as 'light' | 'dark') || 'dark';
@@ -94,11 +101,22 @@ export default function App() {
     };
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
-    const sections = ['about', 'education', 'skills', 'projects', 'testimonials', 'contact'];
+    const sections = ['about', 'education', 'projects', 'testimonials', 'contact'];
     sections.forEach((id) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
+
+    // Initial check
+    const currentSection = sections.find(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        const rect = el.getBoundingClientRect();
+        return rect.top >= 0 && rect.top <= window.innerHeight / 2;
+      }
+      return false;
+    });
+    if (currentSection) setActiveSection(currentSection);
 
     return () => observer.disconnect();
   }, [loading]);
@@ -169,7 +187,12 @@ export default function App() {
   return (
     <div className="relative">
       {/* Navbar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-white/5">
+      <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-[var(--border-color)]">
+        {/* Page Scroll Progress Bar */}
+        <motion.div
+          className="absolute top-0 left-0 right-0 h-1 bg-maroon-500 origin-left z-[60]"
+          style={{ scaleX }}
+        />
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <motion.a 
             href="#"
@@ -197,7 +220,7 @@ export default function App() {
                 {activeSection === link.href.substring(1) && (
                   <motion.div
                     layoutId="activeNav"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-maroon-500 rounded-full"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-maroon-500 rounded-full shadow-[0_2px_8px_rgba(216,93,93,0.4)]"
                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -339,16 +362,6 @@ export default function App() {
                 View CV
               </button>
             </div>
-          </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 1 }}
-            className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[var(--text-secondary)]"
-          >
-            <span className="text-[10px] uppercase tracking-[0.2em]">Scroll</span>
-            <div className="w-px h-12 bg-gradient-to-b from-maroon-500 to-transparent" />
           </motion.div>
         </section>
 
