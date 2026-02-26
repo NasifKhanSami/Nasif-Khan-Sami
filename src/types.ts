@@ -64,7 +64,7 @@ export interface ProfileData {
   projects: Project[];
   testimonials: Testimonial[];
   socials: Socials;
-  resume: string;
+  cv: string;
   calendlyLink?: string;
   profileImage: string;
   heroImage?: string;

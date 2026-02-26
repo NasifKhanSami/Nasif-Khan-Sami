@@ -236,7 +236,7 @@ export default function App() {
             </button>
 
             <motion.a
-              href={profile.resume}
+              href={profile.cv}
               target="_blank"
               rel="noopener noreferrer"
               onClick={trackResumeClick}
@@ -291,7 +291,7 @@ export default function App() {
                   </a>
                 ))}
                 <a
-                  href={profile.resume}
+                  href={profile.cv}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={trackResumeClick}
@@ -803,7 +803,7 @@ export default function App() {
                 <h3 className="text-xl font-bold">Curriculum Vitae</h3>
                 <div className="flex items-center gap-4">
                   <a 
-                    href={profile.resume} 
+                    href={profile.cv} 
                     download
                     onClick={trackResumeClick}
                     className="px-4 py-2 rounded-xl bg-maroon-700 text-white text-sm font-bold flex items-center gap-2 hover:bg-maroon-600 transition-all"
@@ -827,7 +827,7 @@ export default function App() {
                     The embedded PDF viewer is available in the production environment. You can download the full CV using the button above.
                   </p>
                   <a 
-                    href={profile.resume} 
+                    href={profile.cv} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-maroon-500 hover:text-maroon-400 font-bold flex items-center gap-2"
