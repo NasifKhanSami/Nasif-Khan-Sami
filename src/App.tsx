@@ -45,6 +45,7 @@ export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('about');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [activeProjectImage, setActiveProjectImage] = useState<string | null>(null);
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
   const [projectFilter, setProjectFilter] = useState('All');
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -72,6 +73,14 @@ export default function App() {
     }
     localStorage.setItem('theme', theme);
   }, [theme]);
+
+  useEffect(() => {
+    if (selectedProject) {
+      setActiveProjectImage(selectedProject.thumbnail);
+    } else {
+      setActiveProjectImage(null);
+    }
+  }, [selectedProject]);
 
   const toggleTheme = () => {
     setTheme(prev => prev === 'dark' ? 'light' : 'dark');
@@ -868,9 +877,9 @@ export default function App() {
                 <div className="grid lg:grid-cols-2">
                   <div className="h-64 lg:h-full relative">
                     <img 
-                      src={selectedProject.thumbnail} 
+                      src={activeProjectImage || selectedProject.thumbnail} 
                       alt={selectedProject.name} 
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-all duration-500"
                       referrerPolicy="no-referrer"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg-primary)] to-transparent hidden lg:block" />
@@ -912,6 +921,33 @@ export default function App() {
                         <h4 className="text-xs font-bold text-maroon-500 uppercase tracking-widest mb-2">The Solution</h4>
                         <p className="text-[var(--text-secondary)] leading-relaxed">{selectedProject.details.solution}</p>
                       </div>
+
+                      {selectedProject.gallery && selectedProject.gallery.length > 0 && (
+                        <div>
+                          <h4 className="text-xs font-bold text-maroon-500 uppercase tracking-widest mb-4">Gallery</h4>
+                          <div className="grid grid-cols-2 gap-4">
+                            {[selectedProject.thumbnail, ...selectedProject.gallery].map((img, idx) => (
+                              <button 
+                                key={idx} 
+                                onClick={() => setActiveProjectImage(img)}
+                                className={`aspect-[4/3] rounded-xl overflow-hidden border transition-all duration-300 ${
+                                  activeProjectImage === img 
+                                    ? 'border-maroon-500 ring-2 ring-maroon-500/20 scale-[0.98]' 
+                                    : 'border-[var(--border-color)] hover:border-maroon-500/50'
+                                }`}
+                              >
+                                <img 
+                                  src={img} 
+                                  alt={`Gallery ${idx + 1}`} 
+                                  className="w-full h-full object-cover"
+                                  referrerPolicy="no-referrer"
+                                />
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
                       <div className="p-6 rounded-2xl bg-maroon-900/10 border border-maroon-900/30">
                         <h4 className="text-xs font-bold text-maroon-400 uppercase tracking-widest mb-2">The Outcome</h4>
                         <p className="text-[var(--text-primary)] font-medium">{selectedProject.details.outcome}</p>

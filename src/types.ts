@@ -10,8 +10,9 @@ export interface Project {
   name: string;
   thumbnail: string;
   problemStatement: string;
-  category: 'AI Automation' | 'Web' | 'n8n' | 'Prompt Engineering';
+  category: 'AI Automation' | 'Web' | 'n8n' | 'Prompt Engineering' | 'Photography';
   techStack: string[];
+  gallery?: string[];
   status: 'Live' | 'Code' | 'In Progress';
   details: {
     problem: string;

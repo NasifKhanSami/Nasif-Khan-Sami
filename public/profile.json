@@ -145,18 +145,22 @@
       }
     },
     {
-      "name": "LLM Prompt Library",
-      "thumbnail": "https://picsum.photos/seed/prompts/800/600",
-      "problemStatement": "Teams struggled to reuse effective prompts across different AI models.",
-      "category": "Prompt Engineering",
-      "techStack": ["Next.js", "Supabase", "OpenAI API"],
-      "status": "In Progress",
+      "name": "My Photography",
+      "thumbnail": "https://picsum.photos/seed/photography/800/600",
+      "problemStatement": "Capturing moments and perspectives through the lens of a camera.",
+      "category": "Photography",
+      "techStack": ["Adobe Lightroom", "Canon EOS", "Visual Storytelling"],
+      "gallery": [
+        "https://picsum.photos/seed/photo1/1200/800",
+        "https://picsum.photos/seed/photo2/1200/800",
+        "https://picsum.photos/seed/photo3/1200/800"
+      ],
+      "status": "Live",
       "details": {
-        "problem": "Prompt engineering knowledge was siloed and not easily searchable.",
-        "role": "Product Designer",
-        "solution": "Creating a collaborative library for testing, versioning, and sharing AI prompts.",
-        "outcome": "Expected to improve AI output consistency across the organization by 50%.",
-        "github": "https://github.com/NasifKhanSami"
+        "problem": "The need to preserve fleeting moments and express artistic vision through visual media.",
+        "role": "Photographer & Editor",
+        "solution": "A collection of street, landscape, and portrait photography focusing on light and composition.",
+        "outcome": "A growing portfolio of visual stories that complement my technical engineering background."
       }
     }
   ],
